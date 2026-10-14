@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Results from the 50 Startups regression analysis assignment.">
+  <title>50 Startups Regression Analysis</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #5f6b7a;
+      --accent: #2563eb;
+      --surface: #ffffff;
+      --background: #f4f7fb;
+      --border: #dce3ec;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--background);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    main {
+      width: min(1120px, calc(100% - 2rem));
+      margin: 0 auto;
+      padding: 4rem 0;
+    }
+
+    header {
+      max-width: 760px;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      margin: 0 0 0.75rem;
+      font-size: clamp(2.15rem, 6vw, 4rem);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+    }
+
+    h2 { margin: 0 0 1rem; font-size: 1.35rem; }
+    p { margin: 0; color: var(--muted); font-size: 1.05rem; }
+
+    .results {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin: 2rem 0 3rem;
+    }
+
+    .result, figure {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 12px 32px rgb(23 32 51 / 7%);
+    }
+
+    .result { padding: 1.25rem; }
+    .result span { display: block; color: var(--muted); font-size: 0.82rem; }
+    .result strong { display: block; margin-top: 0.35rem; color: var(--accent); font-size: 1.15rem; }
+
+    .visuals { display: grid; gap: 1.5rem; }
+    figure { margin: 0; padding: 1rem; overflow: hidden; }
+    figure img { display: block; width: 100%; height: auto; border-radius: 10px; }
+    figcaption { padding: 0.9rem 0.25rem 0.15rem; color: var(--muted); }
+
+    footer {
+      padding-top: 2rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 850px) {
+      main { padding: 2.5rem 0; }
+      .results { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 520px) {
+      .results { grid-template-columns: 1fr; }
+      figure { padding: 0.6rem; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>50 Startups Regression Analysis</h1>
+      <p>
+        This project follows the CRISP-DM workflow to prepare, model, and evaluate
+        the 50 Startups dataset, with the goal of predicting company profit.
+      </p>
+    </header>
+
+    <section aria-labelledby="results-title">
+      <h2 id="results-title">Results summary</h2>
+      <div class="results">
+        <article class="result"><span>Best model</span><strong>Random Forest Regressor</strong></article>
+        <article class="result"><span>Test RMSE</span><strong>8058.99</strong></article>
+        <article class="result"><span>Test R-squared</span><strong>0.9198</strong></article>
+        <article class="result"><span>Strongest individual feature</span><strong>R&amp;D Spend</strong></article>
+      </div>
+    </section>
+
+    <section class="visuals" aria-label="Regression analysis visualizations">
+      <figure>
+        <img src="model_comparison.png" alt="Comparison of regression model predictions" loading="eager">
+        <figcaption>Comparison of the fitted regression models against the actual startup profits.</figcaption>
+      </figure>
+      <figure>
+        <img src="feature_selection_metrics.png" alt="Feature selection RMSE and R-squared charts" loading="lazy">
+        <figcaption>Cross-validated RMSE and R-squared results by number of selected features.</figcaption>
+      </figure>
+    </section>
+
+    <footer>50 Startups · Regression Analysis Assignment</footer>
+  </main>
+</body>
+</html>
