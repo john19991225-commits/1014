@@ -1,0 +1,6 @@
+Number of Features,Selected Features,RMSE,R-squared
+1,R&D Spend,9379.247237415702,0.9302004520843743
+2,R&D Spend; Marketing Spend,13628.089637311321,0.8688066424142094
+3,R&D Spend; Administration; Marketing Spend,11844.333284422615,0.8987120492852935
+4,State_California; R&D Spend; Administration; Marketing Spend,13351.981691864765,0.875035244526369
+6,State_California; State_Florida; State_New York; R&D Spend; Administration; Marketing Spend,11881.637954923186,0.9021834561844996

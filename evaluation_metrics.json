@@ -1,0 +1,32 @@
+{
+  "test_mae": 5936.07114514286,
+  "test_rmse": 8058.9948773971355,
+  "test_r2": 0.9197974386962864,
+  "optuna_best_cv_rmse": 10628.833595268376,
+  "optuna_trials": 25,
+  "best_parameters": {
+    "n_estimators": 50,
+    "max_depth": 9,
+    "min_samples_split": 4,
+    "min_samples_leaf": 1,
+    "max_features": 0.7
+  },
+  "learning_curve_full_data": {
+    "training_examples": 40.0,
+    "train_rmse_mean": 5819.246678160793,
+    "train_rmse_std": 424.3196264226011,
+    "validation_rmse_mean": 11545.127871712368,
+    "validation_rmse_std": 2963.308987867415
+  },
+  "feature_selection": {
+    "lowest_rmse_feature_count": 1,
+    "lowest_rmse": 9379.247237415702,
+    "highest_r2_feature_count": 1,
+    "highest_r2": 0.9302004520843743
+  },
+  "model_comparison": {
+    "best_model": "Random Forest Regressor",
+    "lowest_rmse": 8058.9948773971355,
+    "r_squared": 0.9197974386962864
+  }
+}

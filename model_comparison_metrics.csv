@@ -1,0 +1,10 @@
+Model,Features used,MSE,RMSE,R-squared
+Random Forest Regressor,State_California; State_Florida; State_New York; R&D Spend; Administration; Marketing Spend,64947398.43391327,8058.9948773971355,0.9197974386962864
+Gradient Boosting Regressor,State_California; State_Florida; State_New York; R&D Spend; Administration; Marketing Spend,78438216.45416842,8856.535239819714,0.9031378313001912
+Mutual Information + Linear Regression,R&D Spend; Administration; Marketing Spend,80926321.22295152,8995.905803361411,0.9000653083037322
+Lasso,State_California; State_Florida; State_New York; R&D Spend; Administration; Marketing Spend,82008657.21315072,9055.863140151287,0.8987287479379849
+Linear Regression,State_California; State_Florida; State_New York; R&D Spend; Administration; Marketing Spend,82010363.0450137,9055.957323497814,0.8987266414319837
+Ridge,State_California; State_Florida; State_New York; R&D Spend; Administration; Marketing Spend,84735534.85059485,9205.190647161788,0.8953613679326505
+Elastic Net,State_California; State_Florida; State_New York; R&D Spend; Administration; Marketing Spend,88862802.81554218,9426.706891356185,0.8902646670646033
+PCA + Linear Regression,4 PCA components (95% variance),334364177.1922504,18285.627612752327,0.5870987281143443
+SVR,State_California; State_Florida; State_New York; R&D Spend; Administration; Marketing Spend,943498606.1429207,30716.422417705497,-0.16511217729751593
